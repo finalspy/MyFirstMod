@@ -1,0 +1,16 @@
+[
+{
+  "modid": "myfirstmod",
+  "name": "My First Mod",
+  "description": "Example placeholder mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["FiNaLsPY"],
+  "credits": "Me, Myself and I",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
