@@ -115,3 +115,24 @@ publishing {
         }
     }
 }
+
+
+
+task copyMods(type: Copy) {
+    from "$buildDir/libs"
+    include "*.jar"
+    def modsDir = System.getenv("APPDATA")
+    into "$modsDir/.minecraft/mods"
+}
+
+task cleanBuildPublish {
+    group = 'Build'
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'publish'
+    tasks.findByName('build').mustRunAfter 'clean'
+    tasks.findByName('copyMods').mustRunAfter 'build'
+    copyMods
+}
+
+
