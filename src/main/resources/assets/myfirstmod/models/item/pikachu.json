@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "myfirstmod:items/pika"
+        "layer0": "myfirstmod:items/pika2"
     },
     "display": {
         "thirdperson": {

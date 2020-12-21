@@ -125,14 +125,9 @@ task copyMods(type: Copy) {
     into "$modsDir/.minecraft/mods"
 }
 
-task cleanBuildPublish {
-    group = 'Build'
-    dependsOn 'clean'
-    dependsOn 'build'
-    dependsOn 'publish'
-    tasks.findByName('build').mustRunAfter 'clean'
-    tasks.findByName('copyMods').mustRunAfter 'build'
-    copyMods
+task cleanBuildDeploy(type: GradleBuild) {
+     group = 'Build'
+     tasks = ['clean', 'build', 'copyMods']
 }
 
 

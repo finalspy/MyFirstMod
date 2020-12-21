@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.ypetit.mods.init.ModBlocks;
 import net.ypetit.mods.init.ModItems;
 
 import org.apache.logging.log4j.Logger;
@@ -25,6 +26,7 @@ public class MyFirstMod
         logger = event.getModLog();
         logger.info(MyFirstMod.MOD_ID + ":preInit()");
         ModItems.init();
+        ModBlocks.init();
     }
 
     @EventHandler
